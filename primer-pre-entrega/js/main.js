@@ -48,8 +48,22 @@ function obtenerOperacion() {
 // Función para realizar el cálculo y mostrar el resultado
 
 function calcular() {
-    const operando1 = parseInt(prompt("Ingresa el N°1 para relizar la operacion :"));
-    const operando2 = parseInt(prompt("Ahora ingresa el N°2 :"));
+    let operando1, operando2;
+
+    parseInt(prompt("Ingresa el N°1 para relizar la operacion :"));
+
+    // Solicito operando1 hasta que se ingrese un número válido
+    while (isNaN(operando1)) {
+        operando1 = parseInt(prompt("Por favor. Ingresa el N°1 ( valido ) para relizar la operacion :"));
+    }
+
+    parseInt(prompt("Ahora ingresa el N°2 :"));
+
+    // Solicito operando2 hasta que se ingrese un número válido
+    while (isNaN(operando2)) {
+        operando2 = parseInt(prompt("Por favor. Ahora ingresa el N°2  ( valido ) :"));
+    }
+
     const operacion = obtenerOperacion();
 
     const resultado = realizarOperacion(operando1, operando2, operacion);
@@ -57,7 +71,7 @@ function calcular() {
     if (isNaN(resultado)) {
         alert("Operación no válida.");
     } else {
-        alert(`El resultado de la operación ${operando1} ${operacion} ${operando2} es = ${resultado}  (BUENARDO)`);
+        alert(`El resultado de la operación ${operando1} ${operacion} ${operando2} es = ${resultado}`);
     }
 }
 
