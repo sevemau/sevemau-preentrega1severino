@@ -50,14 +50,14 @@ function obtenerOperacion() {
 function calcular() {
     let operando1, operando2;
 
-    parseInt(prompt("Ingresa el N°1 para relizar la operacion :"));
+    operando1 = parseInt(prompt("Ingresa el N°1 para relizar la operacion :"));
 
     // Solicito operando1 hasta que se ingrese un número válido
     while (isNaN(operando1)) {
         operando1 = parseInt(prompt("Por favor. Ingresa el N°1 ( valido ) para relizar la operacion :"));
     }
 
-    parseInt(prompt("Ahora ingresa el N°2 :"));
+    operando2 = parseInt(prompt("Ahora ingresa el N°2 :"));
 
     // Solicito operando2 hasta que se ingrese un número válido
     while (isNaN(operando2)) {
